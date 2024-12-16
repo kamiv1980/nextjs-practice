@@ -28,8 +28,8 @@ export function TaskFilter({ searchParams }: any) {
     };
 
     return (
-        <section className="w-1/4 max-w-4xl mx-auto bg-white">
-            <Card className="p-2">
+        <section className="w-1/4 max-md:w-full max-w-4xl mx-auto bg-white">
+            <Card>
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold">Filters</CardTitle>
                 </CardHeader>
@@ -52,7 +52,7 @@ export function TaskFilter({ searchParams }: any) {
                                 Priority
                             </Label>
                             <Select
-                                defaultValue={searchParams.priority ?? Priority.HIGH}
+                                defaultValue={searchParams.priority ?? Priority.ANY}
                                 name="priority"
                             >
                                 <SelectTrigger className="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
@@ -103,17 +103,17 @@ export function TaskFilter({ searchParams }: any) {
                             </Select>
                         </div>
                     </CardContent>
-                    <CardFooter className="flex justify-end mt-6 space-x-4">
+                    <CardFooter className="flex justify-end mt-6">
                         <Button
                             type="button"
                             onClick={handleReset}
-                            className="bg-gray-300 text-gray-800 py-2 px-4 rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                            className="mt-4 bg-gray-300 text-gray-800 py-2 px-4 rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                         >
                             Reset
                         </Button>
                         <Button
                             type="submit"
-                            className="ml-4 bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="mt-4 ml-4 bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                             Apply
                         </Button>

@@ -8,11 +8,17 @@ export default async function TaskList({searchParams}:any) {
     const { data: tasks } = await getTasks(searchParams);
 
     if(!tasks?.length){
-        return null;
+        return (
+            <div className="w-3/4 max-md:w-full flex-col items-center justify-items-center p-16 border border-gray-300 rounded-md shadow-sm">
+                <p className="block text-xl font-bold text-gray-700">
+                    No found
+                </p>
+            </div>
+        );
     }
 
     return (
-        <div className="w-3/4">
+        <div className="w-3/4 max-md:w-full">
             <ul className="space-y-4">
                 {tasks.map((task) => (
                     <li key={task.id}>

@@ -11,7 +11,7 @@ export default async function Tasks(props: { searchParams: Promise<any> }) {
             <Label className="text-2xl font-bold">
                 Tasks List
             </Label>
-            <div className="flex pt-4 gap-8 w-full" >
+            <div className="flex max-md:flex-col pt-4 gap-8 w-full" >
                 <TaskFilter searchParams={searchParams}/>
                 <TaskList searchParams={searchParams}/>
             </div>
