@@ -6,7 +6,7 @@ import {Task} from "@/types/tasks";
 
 export async function getTaskById(id: number): Promise<{ data: Task[] }> {
     const cookieStore = await cookies();
-    const supabase = createClient(cookieStore);
+    const supabase = await createClient(cookieStore);
 
     let query = supabase
         .from("tasks")

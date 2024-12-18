@@ -8,7 +8,7 @@ import { Priority } from "@/constants/tasks";
 
 export default async function createTask(formData: FormData) {
   const cookieStore = await cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient(cookieStore);
 
   const todoData = {
     title: formData.get("title")?.toString() || "",

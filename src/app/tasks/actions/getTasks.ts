@@ -7,7 +7,7 @@ import {Task} from "@/types/tasks";
 
 export async function getTasks(searchParams: any): Promise<{ data: Task[] }> {
   const cookieStore = await cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient(cookieStore);
 
   let query = supabase
     .from("tasks")

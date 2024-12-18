@@ -14,7 +14,10 @@ export default function Home() {
           height={38}
           priority
         />
-      <div className="space-x-16">
+          <p className="block text-xl font-bold text-gray-700">
+              Home work 1
+          </p>
+          <div className="space-x-16">
         <Link href="/tasks">
             <span className="text-blue-400 hover:text-blue-500 font-semibold">
                 Tasks List
@@ -23,11 +26,6 @@ export default function Home() {
         <Link href="/login">
             <span className="text-blue-400 hover:text-blue-500 font-semibold">
               Login
-            </span>
-        </Link>
-        <Link href="/sign-up">
-            <span className="text-blue-400 hover:text-blue-500 font-semibold">
-              Sign up
             </span>
         </Link>
       </div>

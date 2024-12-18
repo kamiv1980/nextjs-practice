@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 
 export default async function deleteTask(formData: FormData) {
   const cookieStore = await cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient(cookieStore);
 
   const todoId = formData.get("id")?.toString();
 
